@@ -140,7 +140,7 @@ body {
     padding-left:4px;
 }
 
-.search-button2 .tooltip {
+/* .search-button2 .tooltip {
     position: absolute;
     top:60px;
     padding:8px 9px;
@@ -155,7 +155,7 @@ body {
 
 .search-button2:hover .tooltip {
     opacity: 1;
-}
+} */
 
 .search-button2:hover {
     background-color: #d3d3d3;
@@ -264,7 +264,7 @@ body {
     cursor: pointer;
 }
 
-.voice-button2 .tooltip {
+/* .voice-button2 .tooltip {
     position: absolute;
     top:60px;
     padding:8px 9px;
@@ -280,7 +280,7 @@ body {
 
 .voice-button2:hover .tooltip {
     opacity: 1;
-}
+} */
 
 .right-nav {
     margin-right:35px;
@@ -512,15 +512,15 @@ body {
     row-gap: 40px;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 1400px) {
     .videos-grid {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
-@media only screen and (max-width:1100px) {
+@media only screen and (max-width:1399px) and (min-width:1101px) {
     .videos-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 @media only screen and (max-width:660px) {
@@ -536,14 +536,26 @@ body {
     .voice-button2 {
         display:block;
     }
+    .create-video-button .tooltip {
+        display: none;
+    }
+    .notifications-button .tooltip {
+        display: none;
+    }
 }
 
 @media only screen and (max-width:790px) {
     /* IZBRISE SE LEVI DEO */
 }
 
-@media only screen and (max-width:700px) {
+@media only screen and (max-width:1099px) and (min-width:701px) {
     .videos-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width:701px) {
+    .videos-grid {
         grid-template-columns: 1fr;
     }
 }

@@ -129,6 +129,72 @@ body {
     position: relative;
 }
 
+.search-button2 {
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius: 20px;
+    position: relative;
+    display:none;
+    background-color: transparent;
+    padding-left:4px;
+}
+
+.search-button2 .tooltip {
+    position: absolute;
+    top:60px;
+    padding:8px 9px;
+    border-radius: 6px;
+    color: white;
+    left:-7px;
+    background-color: #000000af;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+.search-button2:hover .tooltip {
+    opacity: 1;
+}
+
+.search-button2:hover {
+    background-color: #d3d3d3;
+    cursor: pointer;
+}
+
+.search-button .tooltip {
+    position: absolute;
+    top:60px;
+    padding:8px 9px;
+    border-radius: 6px;
+    color: white;
+    left:2px;
+    background-color: #000000af;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+.search-button:hover .tooltip {
+    opacity: 1;
+}
+
+.voice-button .tooltip {
+    position: absolute;
+    top:60px;
+    padding:8px 9px;
+    border-radius: 6px;
+    color: white;
+    left:-50px;
+    white-space: nowrap;
+    background-color: #000000af;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+.voice-button:hover .tooltip {
+    opacity: 1;
+}
+
 .search-button:hover,
 .voice-button:hover {
     background-color: #d3d3d3;
@@ -181,6 +247,39 @@ body {
     border-radius: 20px;
     background-color: #f4f1f1;
     margin-left: 15px;
+    position: relative;
+}
+
+.voice-button2 {
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius: 20px;
+    position: relative;
+    display:none;
+    background-color: transparent;
+}
+.voice-button2:hover {
+    background-color: #d3d3d3;
+    cursor: pointer;
+}
+
+.voice-button2 .tooltip {
+    position: absolute;
+    top:60px;
+    padding:8px 9px;
+    border-radius: 6px;
+    color: white;
+    left:-50px;
+    white-space: nowrap;
+    background-color: #000000af;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+.voice-button2:hover .tooltip {
+    opacity: 1;
 }
 
 .right-nav {
@@ -208,11 +307,48 @@ body {
     border-radius: 30px;
     padding:5px;
     cursor: pointer;
+    position: relative;
+}
+
+.notifications-button .tooltip {
+    position: absolute;
+    top:60px;
+    padding:8px 9px;
+    border-radius: 6px;
+    color: white;
+    left:-27px;
+    white-space: nowrap;
+    background-color: #000000af;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+.notifications-button:hover .tooltip {
+    opacity: 1;
 }
 
 .create-video-button:hover,
 .notifications-button:hover {
     background-color: #d3d3d3;
+}
+
+.create-video-button .tooltip {
+    position: absolute;
+    top:60px;
+    padding:8px 9px;
+    border-radius: 6px;
+    color: white;
+    left:-9px;
+    white-space: nowrap;
+    background-color: #000000af;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+.create-video-button:hover .tooltip {
+    opacity:1;
 }
 
 .account-icon {
@@ -230,7 +366,7 @@ body {
     position: relative;
     margin-left: 70px;
     background-color: white;
-    z-index: 20;
+    z-index: -1;
 }
 
 .lower-header-items {
@@ -242,6 +378,7 @@ body {
     scrollbar-width: none;
     scroll-behavior: smooth;
     margin-left:20px;
+    z-index: 20;
 }
 
 .lower-header-items.dragging {
@@ -307,6 +444,7 @@ body {
     padding: 8px;
     display: none;
     pointer-events: none;
+    z-index: 30;
 }
 
 .lower-header i {
@@ -383,6 +521,20 @@ body {
 @media only screen and (max-width:1100px) {
     .videos-grid {
         grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width:660px) {
+    .middle-nav {
+        display: none;
+    }
+    .right-nav{
+        width:200px;
+    }
+    .search-button2 {
+        display:block;
+    }
+    .voice-button2 {
+        display:block;
     }
 }
 
